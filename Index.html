@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Técnico - Formación Profesional</title>
+  
+  <!-- Bootstrap para que la página se vea bien en celulares -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin: 30px 0;
+    }
+    
+    section {
+      padding: 20px 15px;
+    }
+    
+    /* Encabezado y menú */
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 15px;
+    }
+    
+    .navegacion ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    
+    .navegacion a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .navegacion a:hover {
+      color: #ffd700;
+    }
+    
+    /* Sección de inicio */
+    #inicio {
+      background-color: #e3f2fd;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    
+    .boton {
+      display: inline-block;
+      background-color: #ff6f00;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+    
+    .boton:hover {
+      background-color: #e65100;
+    }
+    
+    /* Servicios con Flexbox */
+    .contenedor-servicios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .servicio {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+    }
+    
+    /* Nosotros con Grid */
+    #nosotros {
+      background-color: #f0f4f8;
+    }
+    
+    .contenedor-equipo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .miembro {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    
+    /* Formulario */
+    #registro {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .boton-enviar {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .boton-enviar:hover {
+      background-color: #1565c0;
+    }
+    
+    .mensaje {
+      margin-top: 10px;
+      display: none;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
+    .error {
+      background-color: #ffebee;
+      color: #c62828;
+      border: 1px solid #ef9a9a;
+    }
+    
+    .exito {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #a5d6a7;
+    }
+    
+    /* Contacto */
+    #contacto {
+      background-color: #f0f4f8;
+      text-align: center;
+    }
+    
+    /* Pie de página */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Encabezado y menú -->
+<header>
+  <h1 style="text-align: center; margin: 0;">🎓 Instituto Técnico SENATI</h1>
+  <nav class="navegacion">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#registro">Registro</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Sección de inicio -->
+<section id="inicio">
+  <h2>Formando profesionales para el futuro</h2>
+  <p>Ofrecemos carreras técnicas y cursos de calidad para tu desarrollo profesional.</p>
+  <a href="#registro" class="boton">¡Inscríbete aquí!</a>
+</section>
+
+<!-- Sección de servicios -->
+<section id="servicios">
+  <h2>Nuestros Servicios Académicos</h2>
+  <p style="text-align: center;">Conoce las carreras y programas que tenemos para ti:</p>
+  
+  <div class="contenedor-servicios">
+    <div class="servicio">
+      <h3>Tecnologías de la Información</h3>
+      <p>Aprende desarrollo web, soporte técnico y redes informáticas.</p>
+    </div>
+    <div class="servicio">
+      <h3>Gestión y Administración</h3>
+      <p>Contabilidad, administración de empresas y atención al cliente.</p>
+    </div>
+    <div class="servicio">
+      <h3>Mecánica y Producción</h3>
+      <p>Mecánica automotriz, soldadura y procesos industriales.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección nosotros -->
+<section id="nosotros">
+  <h2>Nosotros</h2>
+  <p style="text-align: center;">Somos una institución comprometida con la formación de profesionales técnicos capaces y competitivos.</p>
+  
+  <h3 style="text-align: center;">Nuestro Equipo</h3>
+  <div class="contenedor-equipo">
+    <div class="miembro">
+      <h4>Carlos Mendoza</h4>
+      <p>Director General</p>
+    </div>
+    <div class="miembro">
+      <h4>Ana Ramírez</h4>
+      <p>Coordinadora Académica</p>
+    </div>
+    <div class="miembro">
+      <h4>Luis Torres</h4>
+      <p>Jefe de Área Técnica</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de registro -->
+<section id="registro">
+  <h2>Formulario de Registro</h2>
+  <p style="text-align: center;">Completa tus datos para postular a nuestros programas.</p>
+  
+  <form id="formularioRegistro">
+    <div class="form-group">
+      <label for="nombre">Nombres y Apellidos *</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre completo">
+      <div id="nombreMsg" class="mensaje error"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="correo">Correo Electrónico *</label>
+      <input type="email" id="correo" placeholder="correo@ejemplo.com">
+      <div id="correoMsg" class="mensaje error"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="telefono">Teléfono *</label>
+      <input type="tel" id="telefono" placeholder="987654321">
+      <div id="telefonoMsg" class="mensaje error"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="programa">Programa de Interés *</label>
+      <select id="programa">
+        <option value="">Selecciona una opción</option>
+        <option value="tecnologias">Tecnologías de la Información</option>
+        <option value="administracion">Gestión y Administración</option>
+        <option value="mecanica">Mecánica y Producción</option>
+      </select>
+      <div id="programaMsg" class="mensaje error"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="mensaje">Mensaje Adicional</label>
+      <textarea id="mensaje" rows="4" placeholder="¿Algo más que quieras contarnos?"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <input type="checkbox" id="terminos">
+      <label for="terminos">Acepto los términos y condiciones *</label>
+      <div id="terminosMsg" class="mensaje error"></div>
+    </div>
+    
+    <button type="submit" class="boton-enviar">Enviar Registro</button>
+    
+    <div id="mensajeExito" class="mensaje exito">
+      <strong>¡Registro enviado con éxito!</strong>
+      <p>Gracias por postular. Nos pondremos en contacto contigo pronto.</p>
+    </div>
+  </form>
+</section>
+
+<!-- Sección de contacto -->
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>📍 Av. Principal 123, Lima - Perú</p>
+  <p>📞 Teléfono: +51 987 654 321</p>
+  <p>✉️ Correo: informacion@institutotecnico.edu.pe</p>
+</section>
+
+<!-- Pie de página -->
+<footer>
+  <p>© 2026 Instituto Técnico - Todos los derechos reservados</p>
+  <p>Trabajo Final - Frontend Developer Web - SENATI</p>
+</footer>
+
+<!-- Código JavaScript para validar el formulario -->
+<script>
+  // Obtener el formulario
+  const formulario = document.getElementById('formularioRegistro');
+  
+  // Cuando se envía el formulario
+  formulario.addEventListener('submit', function(evento) {
+    // Evitar que la página se recargue
+    evento.preventDefault();
+    
+    // Ocultar mensajes anteriores
+    const todosLosMensajes = document.querySelectorAll('.mensaje');
+    todosLosMensajes.forEach(function(mensaje) {
+      mensaje.style.display = 'none';
+    });
+    
+    let formularioCorrecto = true;
+    
+    // Obtener valores de cada campo
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const telefono = document.getElementById('telefono').value;
+    const programa = document.getElementById('programa').value;
+    const terminos = document.getElementById('terminos').checked;
+    
+    // Validar nombre
+    if (nombre.length < 4) {
+      document.getElementById('nombreMsg').textContent = 'Por favor escribe tu nombre completo';
+      document.getElementById('nombreMsg').style.display = 'block';
+      formularioCorrecto = false;
+    }
+    
+    // Validar correo
+    if (correo.indexOf('@') === -1 || correo.indexOf('.') === -1) {
+      document.getElementById('correoMsg').textContent = 'Ingresa un correo válido (debe contener @ y .)';
+      document.getElementById('correoMsg').style.display = 'block';
+      formularioCorrecto = false;
+    }
+    
+    // Validar teléfono
+    if (telefono.length !== 9 || telefono[0] !== '9') {
+      document.getElementById('telefonoMsg').textContent = 'El teléfono debe tener 9 dígitos y empezar con 9';
+      document.getElementById('telefonoMsg').style.display = 'block';
+      formularioCorrecto = false;
+    }
+    
+    // Validar programa
+    if (programa === '') {
+      document.getElementById('programaMsg').textContent = 'Selecciona un programa de interés';
+      document.getElementById('programaMsg').style.display = 'block';
+      formularioCorrecto = false;
+    }
+    
+    // Validar términos
+    if (!terminos) {
+      document.getElementById('terminosMsg').textContent = 'Debes aceptar los términos y condiciones';
+      document.getElementById('terminosMsg').style.display = 'block';
+      formularioCorrecto = false;
+    }
+    
+    // Si todo está correcto
+    if (formularioCorrecto) {
+      // Simulación de envío de datos
+      console.log('=== DATOS RECIBIDOS ===');
+      console.log('Método GET: Los datos viajan en la dirección web, por ejemplo:');
+      console.log('pagina.html?nombre=' + nombre + '&correo=' + correo);
+      console.log('Método POST: Los datos se envían de forma oculta en el cuerpo de la solicitud');
+      console.log('Nombre: ' + nombre);
+      console.log('Correo: ' + correo);
+      console.log('Teléfono: ' + telefono);
+      console.log('Programa: ' + programa);
+      
+      // Mostrar mensaje de éxito
+      document.getElementById('mensajeExito').style.display = 'block';
+      
+      // Limpiar el formulario después de 5 segundos
+      setTimeout(function() {
+        formulario.reset();
+        document.getElementById('mensajeExito').style.display = 'none';
+      }, 5000);
+    }
+  });
+</script>
+
+</body>
+</html>
